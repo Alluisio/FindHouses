@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
-const App = () => {
+export const SplashScreen = () => {
   return (
     <SafeAreaView>
       <View style={styles.sectionView}>
@@ -22,5 +22,3 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
-
-export default App;
