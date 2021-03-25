@@ -6,7 +6,7 @@ const App = () => {
   return (
     <SafeAreaView>
       <View style={styles.sectionView}>
-        <Text>Bem Vindo ao Find Houses!!!</Text>
+        <Text style={styles.sectionText}>Bem Vindo ao Find Houses!!!</Text>
       </View>
     </SafeAreaView>
   );
@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
     height: 100,
     width: '100%',
     backgroundColor: 'red',
+  },
+  sectionText: {
+    color: 'white',
   },
 });
 
