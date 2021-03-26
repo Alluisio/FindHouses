@@ -12,6 +12,7 @@ import {
   DetailText,
   DetailTitle,
   InputLabel,
+  ButtonText,
 } from './index';
 
 const Wrapper = styled.View`
@@ -68,4 +69,9 @@ stories.add('DetailTitle', () => {
 stories.add('InputLabel', () => {
   const value = text('InputLabel', 'Exemplo de InputLabel');
   return <InputLabel>{value}</InputLabel>;
+});
+
+stories.add('ButtonText', () => {
+  const value = text('ButtonText', 'Exemplo de ButtonText');
+  return <ButtonText>{value}</ButtonText>;
 });
