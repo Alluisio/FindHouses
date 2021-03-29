@@ -25,7 +25,7 @@ export const TopContainer = styled.View`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: ${({ theme }) => theme.metrics.px(36)}px;
+  margin-bottom: ${({ theme }) => theme.metrics.px(24)}px;
 `;
 
 export const TitleContainer = styled.View`
