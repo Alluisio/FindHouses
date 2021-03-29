@@ -9,19 +9,28 @@ import {
   TextContainerRight,
 } from './styles';
 
-export const HouseCard = ({ imgSource }) => {
+export const HouseCard = ({ imgSource, title, description, price }) => {
+  const formattedPrice = value => {
+    if (value != null) {
+      const formatted =
+        '$ ' + value.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+
+      return formatted;
+    } else {
+      return 0;
+    }
+  };
+
   return (
     <CardContainer>
       <CardImage source={{ uri: imgSource }} />
       <TextContainer>
         <TextContainerLeft>
-          <CardTitle>Casa à venda</CardTitle>
-          <CardDescription>
-            Rua Casemiso de Abreu, 1908 - CASA E, Rio de Janeiro
-          </CardDescription>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
         </TextContainerLeft>
         <TextContainerRight>
-          <CardHighLightText>U$ 200,00</CardHighLightText>
+          <CardHighLightText>{formattedPrice(price)}</CardHighLightText>
         </TextContainerRight>
       </TextContainer>
     </CardContainer>
